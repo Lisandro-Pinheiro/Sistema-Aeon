@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Office Calendar</title>
+</head>
+<body>
+  <h1>Microsoft Office Calendar</h1>
+
+  <div id="events-list">
+    <!-- Aqui serão exibidos os eventos do calendário -->
+  </div>
+
+  <script>
+    // Função para buscar eventos do calendário usando o token de acesso
+    async function fetchCalendarEvents(accessToken) {
+      const apiUrl = 'https://graph.microsoft.com/v1.0/me/events';
+      try {
+        const response = await fetch(apiUrl, {
+          headers: {
+            Authorization: `Bearer ${accessToken}`
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error('Erro ao buscar eventos do calendário');
+        }
+
+        const data = await response.json();
+        displayEvents(data.value);
+      } catch (error) {
+        console.error('Erro ao buscar eventos:', error.message);
+      }
+    }
+
+    // Função para exibir os eventos na página
+    function displayEvents(events) {
+      const eventsList = document.getElementById('events-list');
+      eventsList.innerHTML = '';
+
+      events.forEach(event => {
+        const eventElement = document.createElement('div');
+        eventElement.innerHTML = `<strong>${event.subject}</strong>: ${event.start.dateTime}`;
+        eventsList.appendChild(eventElement);
+      });
+    }
+
+    // Obtém o token de acesso da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const accessToken = urlParams.get('accessToken');
+
+    if (accessToken) {
+      fetchCalendarEvents(accessToken);
+    } else {
+      console.error('Token de acesso não encontrado na URL');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://bryntum.com/products/calendar/examples/multiassign-resourceids/ -->
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta property="og:site_name" content="Bryntum">
+	<meta property="og:title" content="Bryntum Calendar - Multi assignment using resourceIds field demo">
+	<meta property="og:description"
+		content="This example shows a calendar using resourceIds field to support multi assignment.">
+	<meta property="og:image"
+		content="https://bryntum.com/products/calendar/examples/multiassign-resourceids/meta/thumb.2048.png">
+	<meta property="og:url" content="https://bryntum.com/products/calendar/examples/multiassign-resourceids">
+	<meta name="twitter:site:id" content="@bryntum">
+	<meta name="twitter:title" content="Bryntum Calendar - Multi assignment using resourceIds field demo">
+	<meta name="twitter:description"
+		content="This example shows a calendar using resourceIds field to support multi assignment.">
+	<meta name="twitter:image"
+		content="https://bryntum.com/products/calendar/examples/multiassign-resourceids/meta/thumb.2048.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="description"
+		content="This example shows a calendar using resourceIds field to support multi assignment.">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Bryntum Calendar - Multi assignment using resourceIds field demo</title>
+	<script src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/helper.js"></script>
+	<link rel="stylesheet"
+		href="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/calendar.stockholm.css"
+		data-bryntum-theme="">
+	<link rel="stylesheet" href="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/shared.css">
+	<script src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/js"></script>
+	<script async="" crossorigin="anonymous"
+		src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/rootcause-full.js"></script>
+	<link rel="icon" type="image/png" href="dist/img/logo.png" sizes="60x60">
+</head>
+
+<body class="notranslate b-theme-stockholm">
+	<div id="container">
+		<header class="demo-header" role="presentation">
+			<div id="title-container">
+				<a id="title" href="https://bryntum.com/products/calendar/examples/#example-multiassign-resourceids">
+					<h1>Multi assignment using resourceIds field demo</h1>
+				</a>
+			</div>
+			<div id="tools"><a
+					class="b-widget b-button b-green b-raised b-text b-outer b-linux b-visible-scrollbar b-chrome"
+					href="https://bryntum.com/download/?product=calendar" type="button" id="trial-button"
+					role="presentation" aria-haspopup="false"><label data-owner-cmp="trial-button"
+						for="trial-button">Download Trial</label></a><button
+					class="b-widget b-button learnButton b-transparent b-icon-align-start b-text b-has-menu b-outer b-linux b-visible-scrollbar b-chrome"
+					type="button" id="b-button-1" role="presentation" aria-haspopup="menu" data-ref="learnButton"><i
+						data-owner-cmp="b-button-1" class="b-fa-book-open b-fa" aria-hidden="true"></i><label
+						data-owner-cmp="b-button-1" for="b-button-1">Learn</label><i data-owner-cmp="b-button-1"
+						class="b-icon b-button-menu-icon b-icon-picker" role="presentation"></i></button><button
+					class="b-widget b-button b-tool b-transparent b-icon-align-start b-outer b-linux b-visible-scrollbar b-chrome"
+					type="button" id="fullscreen-button" role="presentation" aria-haspopup="false"
+					data-ref="fullscreenButton" data-btip="true"><i data-owner-cmp="fullscreen-button"
+						class="b-icon-fullscreen b-icon" aria-hidden="true"></i></button><button
+					class="b-widget b-button b-tool b-transparent b-icon-align-start b-outer b-linux b-visible-scrollbar b-chrome"
+					type="button" id="b-button-2" role="presentation" aria-haspopup="false" data-ref="codeButton"
+					data-btip="true"><i data-owner-cmp="b-button-2" class="b-icon-code b-icon"
+						aria-hidden="true"></i></button><button
+					class="b-widget b-button b-tool b-transparent b-icon-align-start b-has-menu b-outer b-linux b-visible-scrollbar b-chrome"
+					type="button" id="b-button-3" role="presentation" aria-haspopup="dialog" data-ref="infoButton"
+					data-btip="true"><i data-owner-cmp="b-button-3" class="b-icon-cog b-icon"
+						aria-hidden="true"></i></button></div>
+		</header>
+		<div class="b-widget b-container b-panel b-responsive b-calendar b-panel-has-top-toolbar b-vbox b-calendar-nav-toolbar b-outer b-linux b-visible-scrollbar b-chrome b-cal-day b-cal-week b-cal-month b-cal-year b-cal-agenda b-calendardrag b-eventedit b-eventtooltip b-resize-monitored b-responsive-large"
+			role="region" id="b-calendar-1" data-mode="week"><!--POWERED BY BRYNTUM (https://bryntum.com)-->
+			<div data-owner-cmp="b-calendar-1" class="b-focus-trap" aria-hidden="true" tabindex="0"></div>
+			<div data-owner-cmp="b-calendar-1"
+				class="b-vbox b-box-center b-box-container-panel b-panel-body-wrap b-calendar-body-wrap"
+				role="presentation">
+				<div class="b-widget b-container b-toolbar b-calendar-toolbar b-dock-top b-top-toolbar b-hbox b-resize-monitored"
+					role="presentation" id="b-toolbar-1" data-ref="tbar">
+					<div data-owner-cmp="b-toolbar-1"
+						class="b-box-center b-toolbar-content b-content-element b-box-container b-hbox b-overflow"
+						role="presentation"><button
+							class="b-widget b-button b-sidebar-toggle b-borderless b-transparent b-icon-align-start b-box-item b-first-visible-child"
+							type="button" id="b-button-4" role="presentation" aria-haspopup="false"
+							data-ref="toggleSidebar" data-item-index="0" data-btip="true"><i data-owner-cmp="b-button-4"
+								class="b-icon-menu-vertical b-icon" aria-hidden="true"></i></button><button
+							class="b-widget b-button b-cal-nav-item b-calendar-today-button b-icon-align-start b-text b-box-item"
+							type="button" id="b-button-5" role="presentation" aria-haspopup="false"
+							data-ref="todayButton" data-item-index="1"><i data-owner-cmp="b-button-5"
+								class="b-icon-calendar-day b-icon" aria-hidden="true"></i><label
+								data-owner-cmp="b-button-5" for="b-button-5">Today</label></button><button
+							class="b-widget b-button b-cal-nav-item b-borderless b-transparent b-icon-align-start b-box-item"
+							type="button" id="b-button-6" role="presentation" aria-haspopup="false"
+							data-ref="prevButton" data-item-index="2" data-btip="true" aria-disabled="false"><i
+								data-owner-cmp="b-button-6" class="b-icon-previous b-icon"
+								aria-hidden="true"></i></button><button
+							class="b-widget b-button b-cal-nav-item b-borderless b-transparent b-cal-nav-next b-icon-align-start b-box-item"
+							type="button" id="b-button-7" role="presentation" aria-haspopup="false"
+							data-ref="nextButton" data-item-index="3" data-btip="true" aria-disabled="false"><i
+								data-owner-cmp="b-button-7" class="b-icon-next b-icon" aria-hidden="true"></i></button>
+						<div class="b-html b-widget b-calendar-view-desc b-box-item" id="b-widget-1" role="presentation"
+							data-ref="viewDescription" data-item-index="4"><span class="b-calendar-view-desc-text">May
+								2024 (Week 19)</span></div>
+						<div class="b-widget b-toolbar-fill b-box-item" id="b-widget-2" role="presentation"
+							data-ref="spacer" data-item-index="5"></div>
+						<div class="b-widget b-container b-responsive b-modeselector b-hbox b-content-element b-box-container b-box-item b-flex-row b-responsive-large b-last-visible-child"
+							role="presentation" id="b-modeselector-1" data-ref="modeSelector" data-item-index="6"
+							style="flex-wrap: nowrap;"><button
+								class="b-widget b-button b-calendar-fullweek-button b-text b-first-visible-child b-box-item b-pressed"
+								type="button" aria-pressed="true" id="b-button-18" role="presentation"
+								aria-haspopup="false" data-item-index="0" data-btip="true"><label
+									data-owner-cmp="b-button-18" for="b-button-18">Weekends</label></button><button
+								class="b-widget b-button b-calendar-mode-button b-icon-align-start b-has-menu b-box-item b-text"
+								type="button" id="b-button-8" role="presentation" aria-haspopup="menu"
+								data-item-index="1"><i data-owner-cmp="b-button-8" class="b-icon-calendar-days b-icon"
+									aria-hidden="true"></i><label for="b-button-8"
+									data-owner-cmp="b-button-8">Week</label></button>
+							<div class="b-widget b-container b-buttongroup b-content-element b-auto-container b-box-item b-last-visible-child b-flex-row"
+								role="presentation" id="b-buttongroup-1" data-item-index="2"><button
+									data-group="b-modeselector-1-modeSelectorButton"
+									class="b-widget b-button b-text b-first-visible-child" type="button"
+									aria-pressed="false" id="b-button-17" role="presentation" aria-haspopup="false"
+									data-ref="dayShowButton" data-item-index="0"><label data-owner-cmp="b-button-17"
+										for="b-button-17">Day</label></button><button
+									data-group="b-modeselector-1-modeSelectorButton"
+									class="b-widget b-button b-text b-pressed" type="button" aria-pressed="true"
+									id="b-button-19" role="presentation" aria-haspopup="false" data-ref="weekShowButton"
+									data-item-index="1"><label data-owner-cmp="b-button-19"
+										for="b-button-19">Week</label></button><button
+									data-group="b-modeselector-1-modeSelectorButton" class="b-widget b-button b-text"
+									type="button" aria-pressed="false" id="b-button-20" role="presentation"
+									aria-haspopup="false" data-ref="monthShowButton" data-item-index="2"><label
+										data-owner-cmp="b-button-20" for="b-button-20">Month</label></button><button
+									data-group="b-modeselector-1-modeSelectorButton" class="b-widget b-button b-text"
+									type="button" aria-pressed="false" id="b-button-21" role="presentation"
+									aria-haspopup="false" data-ref="yearShowButton" data-item-index="3"><label
+										data-owner-cmp="b-button-21" for="b-button-21">Year</label></button><button
+									data-group="b-modeselector-1-modeSelectorButton"
+									class="b-widget b-button b-text b-last-visible-child" type="button"
+									aria-pressed="false" id="b-button-22" role="presentation" aria-haspopup="false"
+									data-ref="agendaShowButton" data-item-index="4"><label data-owner-cmp="b-button-22"
+										for="b-button-22">Agenda</label></button></div>
+						</div>
+					</div><button
+						class="b-widget b-button b-overflow-button b-row-menu b-icon-align-start b-has-menu b-hidden"
+						type="button" id="b-button-23" role="presentation" aria-label="Show overflowing items"
+						aria-haspopup="false" data-ref="overflowMenuButton" aria-owns="b-menu-1"><i
+							data-owner-cmp="b-button-23" class="b-icon-menu b-icon" aria-hidden="true"></i></button>
+				</div>
+				<div data-owner-cmp="b-calendar-1"
+					class="b-panel-content b-responsive-content b-calendar-content b-box-center b-content-element b-box-container b-hbox b-flex-row"
+					role="presentation" style="padding: 0px; flex-wrap: nowrap;">
+					<div class="b-widget b-container b-panel b-responsive b-sidebar b-panel-has-bottom-toolbar b-vbox b-panel-collapsible b-panel-has-tools b-has-datepicker b-sidebar-left b-box-item b-panel-collapse-left b-first-visible-child b-panel-collapsible-inline b-responsive-large"
+						role="region" id="b-sidebar-1" data-ref="sidebar" data-item-index="0" style="">
+						<div data-owner-cmp="b-sidebar-1" class="b-focus-trap" aria-hidden="true" tabindex="0"></div>
+						<div data-owner-cmp="b-sidebar-1"
+							class="b-vbox b-box-center b-auto-container-panel b-panel-body-wrap b-sidebar-body-wrap"
+							role="presentation" style="">
+							<div data-owner-cmp="b-sidebar-1"
+								class="b-panel-content b-responsive-content b-sidebar-content b-box-center b-content-element b-auto-container b-widget-scroller b-resize-monitored b-flex-column"
+								role="presentation" style="overflow-y: auto;">
+								<div class="b-widget b-container b-panel b-calendarpanel b-datepicker b-schedulerdatepicker b-eventrenderer b-calendardatepicker b-panel-has-top-toolbar b-vbox b-first-visible-child"
+									role="grid" id="b-calendardatepicker-1" data-ref="datePicker"
+									aria-activedescendant="b-calendardatepicker-1-active-day"
+									arialabelledby="b-container-1" data-item-index="0" style="--visible-week-count: 6;">
+									<div data-owner-cmp="b-calendardatepicker-1" class="b-focus-trap" aria-hidden="true"
+										tabindex="0"></div>
+									<div data-owner-cmp="b-calendardatepicker-1"
+										class="b-vbox b-box-center b-box-container-panel b-panel-body-wrap b-calendardatepicker-body-wrap"
+										role="presentation">
+										<div class="b-widget b-container b-toolbar b-dock-top b-top-toolbar b-hbox"
+											role="presentation" id="b-toolbar-3" data-ref="tbar">
+											<div data-owner-cmp="b-toolbar-3"
+												class="b-box-center b-toolbar-content b-content-element b-box-container b-hbox"
+												role="presentation"><button
+													class="b-widget b-button b-icon b-icon-first b-box-item"
+													type="button" id="b-button-12" role="presentation"
+													aria-haspopup="false" data-ref="prevYear" data-item-index="0"
+													data-btip="true"></button><button
+													class="b-widget b-button b-icon b-icon-previous b-box-item"
+													type="button" id="b-button-13" role="presentation"
+													aria-haspopup="false" data-ref="prevMonth" data-item-index="1"
+													data-btip="true"></button>
+												<div class="b-widget b-container b-datepicker-title b-content-element b-auto-container b-box-item b-flex-row"
+													id="b-container-1" role="presentation" data-ref="fields"
+													data-item-index="2">
+													<div class="b-widget b-field b-textfield b-pickerfield b-combo b-readonlycombo b-datepicker-monthfield b-not-editable b-first-visible-child b-readonly"
+														role="presentation" id="b-readonlycombo-1" data-ref="monthField"
+														data-item-index="0">
+														<div data-owner-cmp="b-readonlycombo-1" class="b-field-inner"
+															role="presentation">
+															<div data-owner-cmp="b-readonlycombo-1" type="text"
+																name="b-readonlycombo-1" id="b-readonlycombo-1-input"
+																tabindex="-1" autocomplete="off" role="combobox"
+																aria-expanded="false" aria-haspopup="listbox">May</div>
+														</div>
+													</div><button
+														class="b-widget b-button b-datepicker-yearbutton b-last-visible-child b-disabled b-text"
+														type="button" id="b-button-14" role="presentation"
+														aria-haspopup="false" data-ref="yearButton" data-item-index="1"
+														disabled="" aria-disabled="true"><label for="b-button-14"
+															data-owner-cmp="b-button-14">2024</label></button>
+												</div><button class="b-widget b-button b-icon b-icon-next b-box-item"
+													type="button" id="b-button-15" role="presentation"
+													aria-haspopup="false" data-ref="nextMonth" data-item-index="3"
+													data-btip="true"></button><button
+													class="b-widget b-button b-icon b-icon-last b-box-item"
+													type="button" id="b-button-16" role="presentation"
+													aria-haspopup="false" data-ref="nextYear" data-item-index="4"
+													data-btip="true"></button>
+											</div>
+										</div>
+										<div data-owner-cmp="b-calendardatepicker-1"
+											class="b-panel-content b-calendarpanel-content b-datepicker-content b-schedulerdatepicker-content b-eventrenderer-content b-calendardatepicker-content b-box-center b-content-element b-box-container b-vbox b-no-visible-children b-flex-column"
+											role="presentation">
+											<div data-owner-cmp="b-calendardatepicker-1"
+												class="b-calendar-row b-calendar-weekdays" role="presentation">
+												<div class="b-week-number-cell" role="presentation"></div>
+												<div class="b-calendar-day-header b-weekend b-nonworking-day"
+													role="presentation" data-column-index="0" data-cell-day="0">S</div>
+												<div class="b-calendar-day-header" role="presentation"
+													data-column-index="1" data-cell-day="1">M</div>
+												<div class="b-calendar-day-header" role="presentation"
+													data-column-index="2" data-cell-day="2">T</div>
+												<div class="b-calendar-day-header" role="presentation"
+													data-column-index="3" data-cell-day="3">W</div>
+												<div class="b-calendar-day-header" role="presentation"
+													data-column-index="4" data-cell-day="4">T</div>
+												<div class="b-calendar-day-header" role="presentation"
+													data-column-index="5" data-cell-day="5">F</div>
+												<div class="b-calendar-day-header b-weekend b-nonworking-day"
+													role="presentation" data-column-index="6" data-cell-day="6">S</div>
+												<div class="b-yscroll-pad" role="presentation">
+													<div class="b-yscroll-pad-sizer" role="presentation"></div>
+												</div>
+											</div>
+											<div data-owner-cmp="b-calendardatepicker-1"
+												class="b-weeks-container notranslate" role="grid">
+												<div data-row-index="0" class="b-calendar-row b-calendar-week"
+													role="row" data-week="2024,18">
+													<div class="b-week-number-cell" role="presentation">18</div>
+													<div class="b-calendar-days" role="presentation">
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-weekend b-nonworking-day b-first-visible-cell b-day-of-week-0"
+															data-date="2024-04-28" data-cell-index="0"
+															data-column-index="0" aria-label="April 28, 2024">
+															<div class="b-datepicker-cell-inner">28</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-day-of-week-1"
+															data-date="2024-04-29" data-cell-index="1"
+															data-column-index="1" aria-label="April 29, 2024">
+															<div class="b-datepicker-cell-inner">29</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-day-of-week-2"
+															data-date="2024-04-30" data-cell-index="2"
+															data-column-index="2" aria-label="April 30, 2024">
+															<div class="b-datepicker-cell-inner">30</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-3"
+															data-date="2024-05-01" data-cell-index="3"
+															data-column-index="3" aria-label="May 1, 2024">
+															<div class="b-datepicker-cell-inner">1</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-4"
+															data-date="2024-05-02" data-cell-index="4"
+															data-column-index="4" aria-label="May 2, 2024">
+															<div class="b-datepicker-cell-inner">2</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-last-working-day b-day-of-week-5"
+															data-date="2024-05-03" data-cell-index="5"
+															data-column-index="5" aria-label="May 3, 2024">
+															<div class="b-datepicker-cell-inner">3</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-6"
+															data-date="2024-05-04" data-cell-index="6"
+															data-column-index="6" aria-label="May 4, 2024">
+															<div class="b-datepicker-cell-inner">4</div>
+														</div>
+													</div>
+												</div>
+												<div data-row-index="1" class="b-calendar-row b-calendar-week"
+													role="row" data-week="2024,19">
+													<div class="b-week-number-cell" role="presentation">19</div>
+													<div class="b-calendar-days" role="presentation">
+														<div role="gridcell"
+															class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-0 b-active-date b-selected-date"
+															data-date="2024-05-05" data-cell-index="7"
+															data-column-index="0" aria-label="May 5, 2024"
+															id="b-calendardatepicker-1-active-day" tabindex="0">
+															<div class="b-datepicker-cell-inner">5</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-1"
+															data-date="2024-05-06" data-cell-index="8"
+															data-column-index="1" aria-label="May 6, 2024">
+															<div class="b-datepicker-cell-inner">6</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-2"
+															data-date="2024-05-07" data-cell-index="9"
+															data-column-index="2" aria-label="May 7, 2024">
+															<div class="b-datepicker-cell-inner">7</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-3"
+															data-date="2024-05-08" data-cell-index="10"
+															data-column-index="3" aria-label="May 8, 2024">
+															<div class="b-datepicker-cell-inner">8</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-4"
+															data-date="2024-05-09" data-cell-index="11"
+															data-column-index="4" aria-label="May 9, 2024">
+															<div class="b-datepicker-cell-inner">9</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-last-working-day b-day-of-week-5"
+															data-date="2024-05-10" data-cell-index="12"
+															data-column-index="5" aria-label="May 10, 2024">
+															<div class="b-datepicker-cell-inner">10</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-6"
+															data-date="2024-05-11" data-cell-index="13"
+															data-column-index="6" aria-label="May 11, 2024">
+															<div class="b-datepicker-cell-inner">11</div>
+														</div>
+													</div>
+												</div>
+												<div data-row-index="2" class="b-calendar-row b-calendar-week"
+													role="row" data-week="2024,20">
+													<div class="b-week-number-cell" role="presentation">20</div>
+													<div class="b-calendar-days" role="presentation">
+														<div role="gridcell"
+															class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-0"
+															data-date="2024-05-12" data-cell-index="14"
+															data-column-index="0" aria-label="May 12, 2024">
+															<div class="b-datepicker-cell-inner">12</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-1"
+															data-date="2024-05-13" data-cell-index="15"
+															data-column-index="1" aria-label="May 13, 2024">
+															<div class="b-datepicker-cell-inner">13</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-2"
+															data-date="2024-05-14" data-cell-index="16"
+															data-column-index="2" aria-label="May 14, 2024">
+															<div class="b-datepicker-cell-inner">14</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-3"
+															data-date="2024-05-15" data-cell-index="17"
+															data-column-index="3" aria-label="May 15, 2024">
+															<div class="b-datepicker-cell-inner">15</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-4"
+															data-date="2024-05-16" data-cell-index="18"
+															data-column-index="4" aria-label="May 16, 2024">
+															<div class="b-datepicker-cell-inner">16</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-last-working-day b-day-of-week-5"
+															data-date="2024-05-17" data-cell-index="19"
+															data-column-index="5" aria-label="May 17, 2024">
+															<div class="b-datepicker-cell-inner">17</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-6"
+															data-date="2024-05-18" data-cell-index="20"
+															data-column-index="6" aria-label="May 18, 2024">
+															<div class="b-datepicker-cell-inner">18</div>
+														</div>
+													</div>
+												</div>
+												<div data-row-index="3" class="b-calendar-row b-calendar-week"
+													role="row" data-week="2024,21">
+													<div class="b-week-number-cell" role="presentation">21</div>
+													<div class="b-calendar-days" role="presentation">
+														<div role="gridcell"
+															class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-0"
+															data-date="2024-05-19" data-cell-index="21"
+															data-column-index="0" aria-label="May 19, 2024">
+															<div class="b-datepicker-cell-inner">19</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-1"
+															data-date="2024-05-20" data-cell-index="22"
+															data-column-index="1" aria-label="May 20, 2024">
+															<div class="b-datepicker-cell-inner">20</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-2"
+															data-date="2024-05-21" data-cell-index="23"
+															data-column-index="2" aria-label="May 21, 2024">
+															<div class="b-datepicker-cell-inner">21</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-3"
+															data-date="2024-05-22" data-cell-index="24"
+															data-column-index="3" aria-label="May 22, 2024">
+															<div class="b-datepicker-cell-inner">22</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-4"
+															data-date="2024-05-23" data-cell-index="25"
+															data-column-index="4" aria-label="May 23, 2024">
+															<div class="b-datepicker-cell-inner">23</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-last-working-day b-day-of-week-5"
+															data-date="2024-05-24" data-cell-index="26"
+															data-column-index="5" aria-label="May 24, 2024">
+															<div class="b-datepicker-cell-inner">24</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-6"
+															data-date="2024-05-25" data-cell-index="27"
+															data-column-index="6" aria-label="May 25, 2024">
+															<div class="b-datepicker-cell-inner">25</div>
+														</div>
+													</div>
+												</div>
+												<div data-row-index="4" class="b-calendar-row b-calendar-week"
+													role="row" data-week="2024,22">
+													<div class="b-week-number-cell" role="presentation">22</div>
+													<div class="b-calendar-days" role="presentation">
+														<div role="gridcell"
+															class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-0"
+															data-date="2024-05-26" data-cell-index="28"
+															data-column-index="0" aria-label="May 26, 2024">
+															<div class="b-datepicker-cell-inner">26</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-1"
+															data-date="2024-05-27" data-cell-index="29"
+															data-column-index="1" aria-label="May 27, 2024">
+															<div class="b-datepicker-cell-inner">27</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-2"
+															data-date="2024-05-28" data-cell-index="30"
+															data-column-index="2" aria-label="May 28, 2024">
+															<div class="b-datepicker-cell-inner">28</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-3"
+															data-date="2024-05-29" data-cell-index="31"
+															data-column-index="3" aria-label="May 29, 2024">
+															<div class="b-datepicker-cell-inner">29</div>
+														</div>
+														<div role="gridcell" class="b-calendar-cell b-day-of-week-4"
+															data-date="2024-05-30" data-cell-index="32"
+															data-column-index="4" aria-label="May 30, 2024">
+															<div class="b-datepicker-cell-inner">30</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-last-working-day b-day-of-week-5"
+															data-date="2024-05-31" data-cell-index="33"
+															data-column-index="5" aria-label="May 31, 2024">
+															<div class="b-datepicker-cell-inner">31</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-weekend b-nonworking-day b-day-of-week-6"
+															data-date="2024-06-01" data-cell-index="34"
+															data-column-index="6" aria-label="June 1, 2024">
+															<div class="b-datepicker-cell-inner">1</div>
+														</div>
+													</div>
+												</div>
+												<div data-row-index="5" class="b-calendar-row b-calendar-week"
+													role="row" data-week="2024,23">
+													<div class="b-week-number-cell" role="presentation">23</div>
+													<div class="b-calendar-days" role="presentation">
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-weekend b-nonworking-day b-day-of-week-0"
+															data-date="2024-06-02" data-cell-index="35"
+															data-column-index="0" aria-label="June 2, 2024">
+															<div class="b-datepicker-cell-inner">2</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-day-of-week-1"
+															data-date="2024-06-03" data-cell-index="36"
+															data-column-index="1" aria-label="June 3, 2024">
+															<div class="b-datepicker-cell-inner">3</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-day-of-week-2"
+															data-date="2024-06-04" data-cell-index="37"
+															data-column-index="2" aria-label="June 4, 2024">
+															<div class="b-datepicker-cell-inner">4</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-day-of-week-3"
+															data-date="2024-06-05" data-cell-index="38"
+															data-column-index="3" aria-label="June 5, 2024">
+															<div class="b-datepicker-cell-inner">5</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-day-of-week-4"
+															data-date="2024-06-06" data-cell-index="39"
+															data-column-index="4" aria-label="June 6, 2024">
+															<div class="b-datepicker-cell-inner">6</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-today b-last-working-day b-day-of-week-5"
+															data-date="2024-06-07" data-cell-index="40"
+															data-column-index="5" aria-label="June 7, 2024">
+															<div class="b-datepicker-cell-inner">7</div>
+														</div>
+														<div role="gridcell"
+															class="b-calendar-cell b-other-month b-weekend b-nonworking-day b-last-visible-cell b-day-of-week-6"
+															data-date="2024-06-08" data-cell-index="41"
+															data-column-index="6" aria-label="June 8, 2024">
+															<div class="b-datepicker-cell-inner">8</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div data-owner-cmp="b-calendardatepicker-1" class="b-focus-trap b-end-focus-trap"
+										aria-hidden="true" tabindex="0"></div>
+								</div>
+								<div class="b-widget b-field b-textfield b-filterfield b-empty" role="presentation"
+									id="b-filterfield-1" data-ref="eventFilter" data-item-index="1">
+									<div data-owner-cmp="b-filterfield-1" class="b-field-inner" role="presentation">
+										<input data-owner-cmp="b-filterfield-1" type="text" name="b-filterfield-1"
+											id="b-filterfield-1-input" autocomplete="off" placeholder="Filter events"
+											role="presentation">
+										<div class="b-widget b-fieldtrigger b-icon-remove b-align-end b-icon b-hidden"
+											aria-hidden="true" id="b-fieldtrigger-1" data-ref="clear"></div>
+									</div>
+								</div>
+								<ul class="b-widget b-list b-resourcefilter b-multiselect b-last-visible-child b-widget-scroller b-resize-monitored b-vertical-overflow"
+									id="b-resourcefilter-1" role="listbox" data-ref="resourceFilter"
+									aria-activedescendant="b-resourcefilter-1-active-descendant" tabindex="0"
+									data-item-index="2"
+									style="flex: 1 1 auto; min-height: 110px; overflow: hidden auto;">
+									<li class="b-list-item b-selected" role="option" aria-selected="true" data-index="0"
+										data-id="r1" tabindex="-1">
+										<div class="b-selected-icon b-icon b-sch-foreground-red"></div>Celia
+									</li>
+									<li class="b-list-item b-selected" role="option" aria-selected="true" data-index="1"
+										data-id="r7" tabindex="-1">
+										<div class="b-selected-icon b-icon b-sch-foreground-deep-orange"></div>Dan
+									</li>
+									<li class="b-list-item b-selected" role="option" aria-selected="true" data-index="2"
+										data-id="r6" tabindex="-1">
+										<div class="b-selected-icon b-icon b-sch-foreground-magenta"></div>Dave
+									</li>
+									<li class="b-list-item b-selected" role="option" aria-selected="true" data-index="3"
+										data-id="r2" tabindex="-1">
+										<div class="b-selected-icon b-icon b-sch-foreground-purple"></div>Lee
+									</li>
+									<li class="b-list-item b-selected" role="option" aria-selected="true" data-index="4"
+										data-id="r3" tabindex="-1">
+										<div class="b-selected-icon b-icon b-sch-foreground-blue"></div>Macy
+									</li>
+									<li class="b-list-item b-selected" role="option" aria-selected="true" data-index="5"
+										data-id="r4" tabindex="-1">
+										<div class="b-selected-icon b-icon b-sch-foreground-teal"></div>Madison
+									</li>
+									<li class="b-list-item b-selected" role="option" aria-selected="true" data-index="6"
+										data-id="r5" tabindex="-1">
+										<div class="b-selected-icon b-icon b-sch-foreground-green"></div>Rob
+									</li>
+								</ul>
+							</div>
+							<div class="b-widget b-container b-toolbar b-cal-nav-item b-dock-bottom b-bottom-toolbar b-hbox b-resize-monitored"
+								role="presentation" id="b-toolbar-2" data-ref="bbar">
+								<div data-owner-cmp="b-toolbar-2"
+									class="b-box-center b-toolbar-content b-content-element b-box-container b-hbox b-overflow"
+									role="presentation" style="justify-content: center;"><button
+										class="b-widget b-button b-text b-box-item b-first-visible-child" type="button"
+										id="b-button-9" role="presentation" aria-haspopup="false"
+										data-ref="todayButtonSidebar" data-item-index="0"><label
+											data-owner-cmp="b-button-9" for="b-button-9">Today</label></button><button
+										class="b-widget b-button b-borderless b-icon-align-start b-box-item"
+										type="button" id="b-button-10" role="presentation" aria-haspopup="false"
+										data-ref="prevButtonSidebar" data-item-index="1" data-btip="true"
+										aria-disabled="false"><i data-owner-cmp="b-button-10"
+											class="b-icon-previous b-icon" aria-hidden="true"></i></button><button
+										class="b-widget b-button b-borderless b-icon-align-start b-box-item b-last-visible-child"
+										type="button" id="b-button-11" role="presentation" aria-haspopup="false"
+										data-ref="nextButtonSidebar" data-item-index="2" data-btip="true"
+										aria-disabled="false"><i data-owner-cmp="b-button-11" class="b-icon-next b-icon"
+											aria-hidden="true"></i></button></div><button
+									class="b-widget b-button b-overflow-button b-row-menu b-icon-align-start b-hidden"
+									type="button" id="b-button-24" role="presentation"
+									aria-label="Show overflowing items" aria-haspopup="false"
+									data-ref="overflowMenuButton"><i data-owner-cmp="b-button-24"
+										class="b-icon-menu b-icon" aria-hidden="true"></i></button>
+							</div>
+						</div>
+						<div data-owner-cmp="b-sidebar-1" class="b-focus-trap b-end-focus-trap" aria-hidden="true"
+							tabindex="0"></div>
+					</div>
+					<div class="b-widget b-container b-calendar-viewcontainer b-content-element b-card-container b-box-item b-hide-child-headers b-last-visible-child b-widget-scroller b-resize-monitored b-flex-row"
+						id="b-container-2" role="presentation" data-ref="viewContainer" data-item-index="1"
+						style="padding: 0px; flex: 1 1 100%; overflow: auto;">
+						<div class="b-widget b-container b-panel b-eventrenderer b-responsive b-calendarmixin b-daycellcollecter b-daterangeowner b-dayview b-vbox b-resize-monitored b-hidden b-card-item"
+							role="region" id="b-dayview-1" aria-describedby="b-dayview-1-panel-title" data-ref="day"
+							data-item-index="0"
+							style="--dayview-cell-gutter: 5px; --dayview-cell-inset-size: 40px; --event-height: auto; --arrow-width: calc(var(--event-height) / 3); --arrow-margin: calc(var(--event-height) / -3); --week-length: 7;">
+							<div data-owner-cmp="b-dayview-1" class="b-focus-trap" aria-hidden="true" tabindex="0">
+							</div>
+							<div data-owner-cmp="b-dayview-1"
+								class="b-hbox b-box-center b-box-container-panel b-panel-body-wrap b-dayview-body-wrap"
+								role="presentation">
+								<div data-owner-cmp="b-dayview-1"
+									class="b-panel-content b-eventrenderer-content b-responsive-content b-calendarmixin-content b-daycellcollecter-content b-daterangeowner-content b-dayview-content b-box-center b-content-element b-box-container b-ltr b-vbox b-no-visible-children"
+									role="presentation" style="--dayview-min-event-height: 1em;">
+									<div data-owner-cmp="b-dayview-1" class="b-dayview-allday-row" role="presentation">
+										<div data-owner-cmp="b-dayview-1" class="b-dayview-allday-row-start"
+											role="presentation">
+											<div data-owner-cmp="b-dayview-1" class="b-dayview-allday-text"
+												role="presentation">All day</div><button
+												data-btip="L{DayView.expandAllDayRow}" data-owner-cmp="b-dayview-1"
+												class="b-expand-allday-button b-icon b-icon-expand-row"></button>
+										</div>
+										<div class="b-widget b-eventrenderer b-responsive b-calendarmixin b-daycellcollecter b-daycellrenderer b-daterangeowner b-calendarrow b-calendar-days b-dayview-schedule-container b-dayview-initializing"
+											role="presentation" id="b-calendarrow-1"
+											style="--event-spacing: 2px; --event-height: 25px; --arrow-width: calc(var(--event-height) / 3); --arrow-margin: calc(var(--event-height) / -3); --event-height-px: 25px; --week-length: 7;">
+											<div data-owner-cmp="b-calendarrow-1" class="b-calendarrow-header"
+												role="presentation">
+												<div data-owner-cmp="b-calendarrow-1"
+													class="b-calendarrow-header-container b-widget-scroller b-resize-monitored"
+													role="presentation" style="overflow: hidden;"></div>
+												<div data-owner-cmp="b-calendarrow-1" class="b-yscroll-pad"
+													role="presentation">
+													<div class="b-yscroll-pad-sizer" role="presentation"></div>
+												</div>
+											</div>
+											<div data-owner-cmp="b-calendarrow-1"
+												class="b-calendarrow-body b-widget-scroller b-resize-monitored"
+												role="presentation" style="overflow: hidden;">
+												<div data-owner-cmp="b-calendarrow-1"
+													class="b-calendarrow-cell-container" role="presentation"></div>
+											</div>
+										</div>
+										<div class="b-yscroll-pad" role="presentation">
+											<div class="b-yscroll-pad-sizer" role="presentation"></div>
+										</div>
+									</div>
+									<div data-owner-cmp="b-dayview-1" class="b-dayview-day-content" tabindex="-1">
+										<div data-owner-cmp="b-dayview-1" class="b-timeaxis-container"
+											role="presentation">
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-01"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">12:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">12:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">12:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">1 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-02"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">1:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">1:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">1:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">2 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-03"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">2:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">2:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">2:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">3 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-04"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">3:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">3:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">3:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">4 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-05"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">4:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">4:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">4:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">5 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-06"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">5:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">5:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">5:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">6 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-07"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">6:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">6:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">6:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">7 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-08"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">7:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">7:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">7:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">8 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-09"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">8:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">8:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">8:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">9 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-10"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">9:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">9:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">9:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">10 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-11"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">10:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">10:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">10:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">11 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-12"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">11:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">11:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">11:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">12 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-13"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">12:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">12:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">12:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">1 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-14"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">1:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">1:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">1:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">2 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-15"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">2:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">2:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">2:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">3 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-16"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">3:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">3:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">3:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">4 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-17"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">4:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">4:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">4:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">5 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-18"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">5:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">5:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">5:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">6 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-19"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">6:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">6:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">6:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">7 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-20"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">7:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">7:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">7:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">8 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-21"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">8:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">8:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">8:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">9 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-22"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">9:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">9:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">9:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">10 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-23"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">10:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">10:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">10:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">11 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-24"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">11:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">11:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">11:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">12 AM</div>
+											</div>
+										</div>
+										<div data-owner-cmp="b-dayview-1" class="b-dayview-day-container"
+											role="presentation"></div>
+									</div>
+									<div data-owner-cmp="b-dayview-1" class="b-virtual-scrollers b-hide-display"
+										role="presentation">
+										<div class="b-virtual-scroller" role="presentation"></div>
+										<div class="b-yscroll-pad" role="presentation">
+											<div class="b-yscroll-pad-sizer" role="presentation"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-owner-cmp="b-dayview-1" class="b-focus-trap b-end-focus-trap" aria-hidden="true"
+								tabindex="0"></div>
+						</div>
+						<div class="b-widget b-container b-panel b-eventrenderer b-responsive b-calendarmixin b-daycellcollecter b-daterangeowner b-dayview b-weekview b-vbox b-resize-monitored b-card-item b-first-visible-child b-last-visible-child b-responsive-large"
+							role="region" id="b-weekview-1" aria-describedby="b-weekview-1-panel-title" data-ref="week"
+							data-item-index="1"
+							style="--dayview-cell-gutter: 5px; --dayview-cell-inset-size: 40px; --week-length: 7; --event-height: auto; --arrow-width: calc(var(--event-height) / 3); --arrow-margin: calc(var(--event-height) / -3); --time-axis-width: 4em;">
+							<div data-owner-cmp="b-weekview-1" class="b-focus-trap" aria-hidden="true" tabindex="0">
+							</div>
+							<div data-owner-cmp="b-weekview-1"
+								class="b-hbox b-box-center b-box-container-panel b-panel-body-wrap b-weekview-body-wrap"
+								role="presentation">
+								<div data-owner-cmp="b-weekview-1"
+									class="b-panel-content b-eventrenderer-content b-responsive-content b-calendarmixin-content b-daycellcollecter-content b-daterangeowner-content b-dayview-content b-weekview-content b-box-center b-content-element b-box-container b-ltr b-vbox b-no-visible-children"
+									role="presentation"
+									style="--dayview-min-event-height: 1em; --day-length: 24; --day-height: 1008px; --hour-height: 42px; --half-hour-height: 20px; --fifteen-minute-height: 9.5px; --twelve-minute-height: 7.4px; --ten-minute-height: 6px; --six-minute-height: 3.2px; --five-minute-height: 2.5px; --leaf-tick-height: 2.5px; --day-start-offset: 0px;">
+									<div data-owner-cmp="b-weekview-1"
+										class="b-dayview-allday-row b-show-yscroll-padding" role="presentation">
+										<div data-owner-cmp="b-weekview-1" class="b-dayview-allday-row-start"
+											role="presentation">
+											<div data-owner-cmp="b-weekview-1" class="b-dayview-allday-text"
+												role="presentation">All day</div><button
+												data-btip="L{DayView.expandAllDayRow}" data-owner-cmp="b-weekview-1"
+												class="b-expand-allday-button b-icon b-icon-expand-row"></button>
+										</div>
+										<div class="b-widget b-eventrenderer b-responsive b-calendarmixin b-daycellcollecter b-daycellrenderer b-daterangeowner b-calendarrow b-calendar-days b-dayview-schedule-container b-draggable b-droppable b-responsive-large"
+											role="presentation" id="b-calendarrow-2"
+											style="--event-spacing: 2px; --event-height: 25px; --arrow-width: calc(var(--event-height) / 3); --arrow-margin: calc(var(--event-height) / -3); --event-height-px: 25px; --week-length: 7;">
+											<div data-owner-cmp="b-calendarrow-2" class="b-calendarrow-header"
+												role="presentation">
+												<div data-owner-cmp="b-calendarrow-2"
+													class="b-calendarrow-header-container b-widget-scroller b-resize-monitored"
+													role="presentation" style="overflow: hidden;">
+													<div data-header-date="2024-05-05"
+														class="b-cal-cell-header b-nonworking-day b-weekend b-selected-date b-day-of-week-0"
+														role="presentation" style="">
+														<div class="b-day-name-part b-day-name-day" role="presentation">
+															Sun</div>
+														<div class="b-day-name-part b-day-name-date"
+															role="presentation">5</div>
+													</div>
+													<div data-header-date="2024-05-06"
+														class="b-cal-cell-header b-day-of-week-1" role="presentation"
+														style="">
+														<div class="b-day-name-part b-day-name-day" role="presentation">
+															Mon</div>
+														<div class="b-day-name-part b-day-name-date"
+															role="presentation">6</div>
+													</div>
+													<div data-header-date="2024-05-07"
+														class="b-cal-cell-header b-day-of-week-2" role="presentation"
+														style="">
+														<div class="b-day-name-part b-day-name-day" role="presentation">
+															Tue</div>
+														<div class="b-day-name-part b-day-name-date"
+															role="presentation">7</div>
+													</div>
+													<div data-header-date="2024-05-08"
+														class="b-cal-cell-header b-day-of-week-3" role="presentation"
+														style="">
+														<div class="b-day-name-part b-day-name-day" role="presentation">
+															Wed</div>
+														<div class="b-day-name-part b-day-name-date"
+															role="presentation">8</div>
+													</div>
+													<div data-header-date="2024-05-09"
+														class="b-cal-cell-header b-day-of-week-4" role="presentation"
+														style="">
+														<div class="b-day-name-part b-day-name-day" role="presentation">
+															Thu</div>
+														<div class="b-day-name-part b-day-name-date"
+															role="presentation">9</div>
+													</div>
+													<div data-header-date="2024-05-10"
+														class="b-cal-cell-header b-day-of-week-5" role="presentation"
+														style="">
+														<div class="b-day-name-part b-day-name-day" role="presentation">
+															Fri</div>
+														<div class="b-day-name-part b-day-name-date"
+															role="presentation">10</div>
+													</div>
+													<div data-header-date="2024-05-11"
+														class="b-cal-cell-header b-nonworking-day b-weekend b-day-of-week-6"
+														role="presentation" style="">
+														<div class="b-day-name-part b-day-name-day" role="presentation">
+															Sat</div>
+														<div class="b-day-name-part b-day-name-date"
+															role="presentation">11</div>
+													</div>
+												</div>
+												<div data-owner-cmp="b-calendarrow-2" class="b-yscroll-pad"
+													role="presentation">
+													<div class="b-yscroll-pad-sizer" role="presentation"></div>
+												</div>
+											</div>
+											<div data-owner-cmp="b-calendarrow-2"
+												class="b-calendarrow-body b-widget-scroller b-resize-monitored b-zero-height b-vertical-overflow"
+												role="presentation" style="overflow: hidden;">
+												<div data-owner-cmp="b-calendarrow-2"
+													class="b-calendarrow-cell-container" role="presentation"
+													style="height: 1px;">
+													<div data-date="2024-05-05"
+														class="b-nonworking-day b-weekend b-cal-empty-cell b-dayview-allday b-calendar-cell b-day-of-week-0"
+														role="presentation" style="">
+														<div class="b-cal-event-bar-container" role="presentation">
+														</div>
+													</div>
+													<div data-date="2024-05-06"
+														class="b-cal-empty-cell b-dayview-allday b-calendar-cell b-day-of-week-1"
+														role="presentation" style="">
+														<div class="b-cal-event-bar-container" role="presentation">
+														</div>
+													</div>
+													<div data-date="2024-05-07"
+														class="b-cal-empty-cell b-dayview-allday b-calendar-cell b-day-of-week-2"
+														role="presentation" style="">
+														<div class="b-cal-event-bar-container" role="presentation">
+														</div>
+													</div>
+													<div data-date="2024-05-08"
+														class="b-cal-empty-cell b-dayview-allday b-calendar-cell b-day-of-week-3"
+														role="presentation" style="">
+														<div class="b-cal-event-bar-container" role="presentation">
+														</div>
+													</div>
+													<div data-date="2024-05-09"
+														class="b-cal-empty-cell b-dayview-allday b-calendar-cell b-day-of-week-4"
+														role="presentation" style="">
+														<div class="b-cal-event-bar-container" role="presentation">
+														</div>
+													</div>
+													<div data-date="2024-05-10"
+														class="b-cal-empty-cell b-dayview-allday b-calendar-cell b-day-of-week-5 b-last-working-day"
+														role="presentation" style="">
+														<div class="b-cal-event-bar-container" role="presentation">
+														</div>
+													</div>
+													<div data-date="2024-05-11"
+														class="b-nonworking-day b-weekend b-cal-empty-cell b-dayview-allday b-calendar-cell b-day-of-week-6"
+														role="presentation" style="">
+														<div class="b-cal-event-bar-container" role="presentation">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="b-yscroll-pad" role="presentation">
+											<div class="b-yscroll-pad-sizer" role="presentation"></div>
+										</div>
+									</div>
+									<div data-owner-cmp="b-weekview-1"
+										class="b-dayview-day-content b-widget-scroller b-resize-monitored b-vertical-overflow"
+										tabindex="-1" style="overflow-y: auto;">
+										<div data-owner-cmp="b-weekview-1" class="b-timeaxis-container"
+											role="presentation">
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-01"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">12:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">12:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">12:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">1 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-02"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">1:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">1:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">1:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">2 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-03"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">2:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">2:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">2:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">3 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-04"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">3:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">3:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">3:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">4 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-05"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">4:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">4:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">4:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">5 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-06"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">5:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">5:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">5:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">6 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-07"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">6:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">6:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">6:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">7 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-08"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">7:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">7:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">7:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">8 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-09"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">8:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">8:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">8:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">9 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-10"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">9:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">9:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">9:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">10 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-11"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">10:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">10:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">10:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">11 AM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-12"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:05 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:10 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">11:15 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:20 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:25 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">11:30 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:35 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:40 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">11:45 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:50 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:55 AM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">12 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-13"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">12:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">12:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">12:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">12:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">12:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">1 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-14"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">1:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">1:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">1:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">1:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">1:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">2 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-15"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">2:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">2:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">2:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">2:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">2:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">3 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-16"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">3:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">3:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">3:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">3:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">3:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">4 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-17"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">4:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">4:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">4:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">4:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">4:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">5 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-18"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">5:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">5:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">5:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">5:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">5:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">6 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-19"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">6:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">6:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">6:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">6:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">6:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">7 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-20"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">7:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">7:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">7:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">7:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">7:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">8 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-21"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">8:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">8:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">8:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">8:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">8:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">9 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-22"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">9:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">9:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">9:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">9:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">9:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">10 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-23"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">10:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">10:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">10:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">10:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">10:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">11 PM</div>
+											</div>
+											<div class="b-dayview-timeaxis-time b-dayview-timeaxis-time-24"
+												role="presentation">
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:05 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:10 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">11:15 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:20 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:25 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3 b-dayview-tick-level-2 b-dayview-tick-level-1"
+													role="presentation">11:30 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:35 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:40 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-2"
+													role="presentation">11:45 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4 b-dayview-tick-level-3"
+													role="presentation">11:50 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-tick-level-4"
+													role="presentation">11:55 PM</div>
+												<div class="b-dayview-timeaxis-tick b-dayview-hour-tick"
+													role="presentation">12 AM</div>
+											</div>
+										</div>
+										<div data-owner-cmp="b-weekview-1"
+											class="b-dayview-day-container b-widget-scroller b-resize-monitored b-draggable b-droppable"
+											role="presentation" style="overflow: hidden clip;">
+											<div data-date="2024-05-05"
+												class="b-dayview-day-detail b-calendar-cell b-nonworking-day b-weekend b-day-of-week-0"
+												role="presentation" style="">
+												<div class="b-dayview-inset" role="presentation"></div>
+												<div class="b-dayview-event-container" role="presentation"></div>
+											</div>
+											<div data-date="2024-05-06"
+												class="b-dayview-day-detail b-calendar-cell b-day-of-week-1"
+												role="presentation" style="">
+												<div class="b-dayview-inset" role="presentation"></div>
+												<div class="b-dayview-event-container" role="presentation"></div>
+											</div>
+											<div data-date="2024-05-07"
+												class="b-dayview-day-detail b-calendar-cell b-day-of-week-2"
+												role="presentation" style="">
+												<div class="b-dayview-inset" role="presentation"></div>
+												<div class="b-dayview-event-container" role="presentation">
+													<div tabindex="0" data-event-id="1"
+														class="b-cal-event-wrap b-past-event"
+														style="--cal-event-color: var(--cal-color-red); padding-bottom: 1px; left: 0px; top: 41.67%; width: 100%; height: 8.33%; min-width: calc(40%);">
+														<div class="b-cal-event" role="presentation" style="">
+															<div class="b-cal-event-body" role="presentation" style="">
+																<div class="b-event-header" role="presentation">
+																	<div class="b-event-time" role="presentation">10 AM
+																	</div><i
+																		class="b-cal-event-icon b-icon b-fw-icon b-fa b-fa-utensils"
+																		role="presentation" style=""></i>
+																</div>
+																<div class="b-cal-event-desc b-cal-event-desc-complex"
+																	role="presentation">
+																	<div class="b-cal-event-name" role="presentation">
+																		Cook lunch</div>
+																	<div class="b-cal-event-resource-avatars"
+																		role="presentation"><img draggable="false"
+																			loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Celia" aria-label="Celia"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/celia.jpg"
+																			data-btip="Celia" data-resource-id="r1"
+																			role="presentation" style=""><img
+																			draggable="false" loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Lee" aria-label="Lee"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/lee.jpg"
+																			data-btip="Lee" data-resource-id="r2"
+																			role="presentation" style=""><img
+																			draggable="false" loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Macy" aria-label="Macy"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/macy.jpg"
+																			data-btip="Macy" data-resource-id="r3"
+																			role="presentation" style=""></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div data-date="2024-05-08"
+												class="b-dayview-day-detail b-calendar-cell b-day-of-week-3"
+												role="presentation" style="">
+												<div class="b-dayview-inset" role="presentation"></div>
+												<div class="b-dayview-event-container" role="presentation">
+													<div tabindex="0" data-event-id="2"
+														class="b-cal-event-wrap b-past-event"
+														style="--cal-event-color: var(--cal-color-red); padding-bottom: 1px; left: 0px; top: 54.17%; width: 100%; height: 8.33%; min-width: calc(40%);">
+														<div class="b-cal-event" role="presentation" style="">
+															<div class="b-cal-event-body" role="presentation" style="">
+																<div class="b-event-header" role="presentation">
+																	<div class="b-event-time" role="presentation">1 PM
+																	</div><i
+																		class="b-cal-event-icon b-icon b-fw-icon b-fa b-fa-campground"
+																		role="presentation" style=""></i>
+																</div>
+																<div class="b-cal-event-desc b-cal-event-desc-complex"
+																	role="presentation">
+																	<div class="b-cal-event-name" role="presentation">
+																		Set up tent</div>
+																	<div class="b-cal-event-resource-avatars"
+																		role="presentation"><img draggable="false"
+																			loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Celia" aria-label="Celia"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/celia.jpg"
+																			data-btip="Celia" data-resource-id="r1"
+																			role="presentation" style=""><img
+																			draggable="false" loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Madison" aria-label="Madison"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/madison.jpg"
+																			data-btip="Madison" data-resource-id="r4"
+																			role="presentation" style=""><img
+																			draggable="false" loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Rob" aria-label="Rob"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/rob.jpg"
+																			data-btip="Rob" data-resource-id="r5"
+																			role="presentation" style=""></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div data-date="2024-05-09"
+												class="b-dayview-day-detail b-calendar-cell b-day-of-week-4"
+												role="presentation" style="">
+												<div class="b-dayview-inset" role="presentation"></div>
+												<div class="b-dayview-event-container" role="presentation">
+													<div tabindex="0" data-event-id="3"
+														class="b-cal-event-wrap b-past-event"
+														style="--cal-event-color: var(--cal-color-magenta); padding-bottom: 1px; left: 0px; top: 33.33%; width: 100%; height: 12.5%; min-width: calc(40%);">
+														<div class="b-cal-event" role="presentation" style="">
+															<div class="b-cal-event-body" role="presentation" style="">
+																<div class="b-event-header" role="presentation">
+																	<div class="b-event-time" role="presentation">8 AM
+																	</div><i
+																		class="b-cal-event-icon b-icon b-fw-icon b-fa b-fa-tree"
+																		role="presentation" style=""></i>
+																</div>
+																<div class="b-cal-event-desc b-cal-event-desc-complex"
+																	role="presentation">
+																	<div class="b-cal-event-name" role="presentation">
+																		Get firewood</div>
+																	<div class="b-cal-event-resource-avatars"
+																		role="presentation"><img draggable="false"
+																			loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Dave" aria-label="Dave"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/dave.jpg"
+																			data-btip="Dave" data-resource-id="r6"
+																			role="presentation" style=""><img
+																			draggable="false" loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Dan" aria-label="Dan"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/dan.jpg"
+																			data-btip="Dan" data-resource-id="r7"
+																			role="presentation" style=""></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div data-date="2024-05-10"
+												class="b-dayview-day-detail b-calendar-cell b-day-of-week-5"
+												role="presentation" style="">
+												<div class="b-dayview-inset" role="presentation"></div>
+												<div class="b-dayview-event-container" role="presentation">
+													<div tabindex="0" data-event-id="4"
+														class="b-cal-event-wrap b-past-event"
+														style="--cal-event-color: var(--cal-color-blue); padding-bottom: 1px; left: 0px; top: 41.67%; width: 100%; height: 12.5%; min-width: calc(40%);">
+														<div class="b-cal-event" role="presentation" style="">
+															<div class="b-cal-event-body" role="presentation" style="">
+																<div class="b-event-header" role="presentation">
+																	<div class="b-event-time" role="presentation">10 AM
+																	</div><i
+																		class="b-cal-event-icon b-icon b-fw-icon b-fa b-fa-tint"
+																		role="presentation" style=""></i>
+																</div>
+																<div class="b-cal-event-desc b-cal-event-desc-complex"
+																	role="presentation">
+																	<div class="b-cal-event-name" role="presentation">
+																		Boil water</div>
+																	<div class="b-cal-event-resource-avatars"
+																		role="presentation"><img draggable="false"
+																			loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Macy" aria-label="Macy"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/macy.jpg"
+																			data-btip="Macy" data-resource-id="r3"
+																			role="presentation" style=""><img
+																			draggable="false" loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Madison" aria-label="Madison"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/madison.jpg"
+																			data-btip="Madison" data-resource-id="r4"
+																			role="presentation" style=""></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div data-date="2024-05-11"
+												class="b-dayview-day-detail b-calendar-cell b-nonworking-day b-weekend b-last-cell b-day-of-week-6"
+												role="presentation" style="">
+												<div class="b-dayview-inset" role="presentation"></div>
+												<div class="b-dayview-event-container" role="presentation">
+													<div tabindex="0" data-event-id="5"
+														class="b-cal-event-wrap b-past-event"
+														style="--cal-event-color: var(--cal-color-blue); padding-bottom: 1px; left: 0px; top: 54.17%; width: 100%; height: 8.33%; min-width: calc(40%);">
+														<div class="b-cal-event" role="presentation" style="">
+															<div class="b-cal-event-body" role="presentation" style="">
+																<div class="b-event-header" role="presentation">
+																	<div class="b-event-time" role="presentation">1 PM
+																	</div><i
+																		class="b-cal-event-icon b-icon b-fw-icon b-fa b-fa-fire-alt"
+																		role="presentation" style=""></i>
+																</div>
+																<div class="b-cal-event-desc b-cal-event-desc-complex"
+																	role="presentation">
+																	<div class="b-cal-event-name" role="presentation">
+																		Make fire</div>
+																	<div class="b-cal-event-resource-avatars"
+																		role="presentation"><img draggable="false"
+																			loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Macy" aria-label="Macy"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/macy.jpg"
+																			data-btip="Macy" data-resource-id="r3"
+																			role="presentation" style=""><img
+																			draggable="false" loading="lazy"
+																			class="b-resource-avatar b-resource-image"
+																			alt="Dave" aria-label="Dave"
+																			src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/dave.jpg"
+																			data-btip="Dave" data-resource-id="r6"
+																			role="presentation" style=""></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div data-owner-cmp="b-weekview-1"
+										class="b-virtual-scrollers b-hide-display b-show-yscroll-padding"
+										role="presentation">
+										<div class="b-virtual-scroller b-widget-scroller b-resize-monitored"
+											role="presentation" style="overflow: auto hidden;"></div>
+										<div class="b-yscroll-pad" role="presentation">
+											<div class="b-yscroll-pad-sizer" role="presentation"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-owner-cmp="b-weekview-1" class="b-focus-trap b-end-focus-trap" aria-hidden="true"
+								tabindex="0"></div>
+						</div>
+						<div class="b-widget b-container b-panel b-calendarpanel b-eventrenderer b-responsive b-calendarmixin b-daycellcollecter b-daycellrenderer b-monthview b-vbox b-resize-monitored b-ltr b-hidden b-card-item"
+							role="region" id="b-monthview-1" aria-describedby="b-monthview-1-panel-title"
+							data-ref="month" data-item-index="2"
+							style="--visible-week-count: 6; --event-height: 20px; --arrow-width: calc(var(--event-height) / 3); --arrow-margin: calc(var(--event-height) / -3); --event-height-px: 20px; --event-spacing: 2px; --week-length: 7; min-height: 485px;">
+							<div data-owner-cmp="b-monthview-1" class="b-focus-trap" aria-hidden="true" tabindex="0">
+							</div>
+							<div data-owner-cmp="b-monthview-1"
+								class="b-hbox b-box-center b-box-container-panel b-panel-body-wrap b-monthview-body-wrap"
+								role="presentation">
+								<div data-owner-cmp="b-monthview-1"
+									class="b-panel-content b-calendarpanel-content b-eventrenderer-content b-responsive-content b-calendarmixin-content b-daycellcollecter-content b-daycellrenderer-content b-monthview-content b-box-center b-content-element b-box-container b-ltr b-vbox b-no-visible-children"
+									role="presentation">
+									<div data-owner-cmp="b-monthview-1" class="b-calendar-row b-calendar-weekdays"
+										role="presentation">
+										<div class="b-week-number-cell" role="presentation"></div>
+										<div class="b-calendar-day-header b-weekend b-nonworking-day"
+											role="presentation" data-column-index="0" data-cell-day="0">Sun</div>
+										<div class="b-calendar-day-header" role="presentation" data-column-index="1"
+											data-cell-day="1">Mon</div>
+										<div class="b-calendar-day-header" role="presentation" data-column-index="2"
+											data-cell-day="2">Tue</div>
+										<div class="b-calendar-day-header" role="presentation" data-column-index="3"
+											data-cell-day="3">Wed</div>
+										<div class="b-calendar-day-header" role="presentation" data-column-index="4"
+											data-cell-day="4">Thu</div>
+										<div class="b-calendar-day-header" role="presentation" data-column-index="5"
+											data-cell-day="5">Fri</div>
+										<div class="b-calendar-day-header b-weekend b-nonworking-day"
+											role="presentation" data-column-index="6" data-cell-day="6">Sat</div>
+										<div class="b-yscroll-pad" role="presentation">
+											<div class="b-yscroll-pad-sizer" role="presentation"></div>
+										</div>
+									</div>
+									<div data-owner-cmp="b-monthview-1" class="b-weeks-container notranslate"
+										role="presentation">
+										<div data-row-index="0" class="b-calendar-row b-calendar-week"
+											role="presentation" data-week="2024,18">
+											<div class="b-week-number-cell" role="presentation">18</div>
+											<div class="b-calendar-days" role="presentation">
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-weekend b-nonworking-day b-first-visible-cell b-day-of-week-0 b-cal-empty-cell"
+													data-date="2024-04-28" data-cell-index="0" data-column-index="0"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-week-num" role="presentation">18</div>
+														<div class="b-day-name b-day-num" role="presentation">28</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-day-of-week-1 b-cal-empty-cell"
+													data-date="2024-04-29" data-cell-index="1" data-column-index="1"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">29</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-day-of-week-2 b-cal-empty-cell"
+													data-date="2024-04-30" data-cell-index="2" data-column-index="2"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">30</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-3 b-cal-empty-cell"
+													data-date="2024-05-01" data-cell-index="3" data-column-index="3"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">1</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-4 b-cal-empty-cell"
+													data-date="2024-05-02" data-cell-index="4" data-column-index="4"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">2</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-last-working-day b-day-of-week-5 b-cal-empty-cell"
+													data-date="2024-05-03" data-cell-index="5" data-column-index="5"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">3</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-6 b-cal-empty-cell"
+													data-date="2024-05-04" data-cell-index="6" data-column-index="6"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">4</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+											</div>
+										</div>
+										<div data-row-index="1" class="b-calendar-row b-calendar-week"
+											role="presentation" data-week="2024,19">
+											<div class="b-week-number-cell" role="presentation">19</div>
+											<div class="b-calendar-days" role="presentation">
+												<div role="presentation"
+													class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-0 b-cal-empty-cell"
+													data-date="2024-05-05" data-cell-index="7" data-column-index="0"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-week-num" role="presentation">19</div>
+														<div class="b-day-name b-day-num" role="presentation">5</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-1 b-cal-empty-cell"
+													data-date="2024-05-06" data-cell-index="8" data-column-index="1"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">6</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-2 b-cal-empty-cell"
+													data-date="2024-05-07" data-cell-index="9" data-column-index="2"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">7</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-3 b-cal-empty-cell"
+													data-date="2024-05-08" data-cell-index="10" data-column-index="3"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">8</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-4 b-cal-empty-cell"
+													data-date="2024-05-09" data-cell-index="11" data-column-index="4"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">9</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-last-working-day b-day-of-week-5 b-cal-empty-cell"
+													data-date="2024-05-10" data-cell-index="12" data-column-index="5"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">10</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-6 b-cal-empty-cell"
+													data-date="2024-05-11" data-cell-index="13" data-column-index="6"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">11</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+											</div>
+										</div>
+										<div data-row-index="2" class="b-calendar-row b-calendar-week"
+											role="presentation" data-week="2024,20">
+											<div class="b-week-number-cell" role="presentation">20</div>
+											<div class="b-calendar-days" role="presentation">
+												<div role="presentation"
+													class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-0 b-cal-empty-cell"
+													data-date="2024-05-12" data-cell-index="14" data-column-index="0"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-week-num" role="presentation">20</div>
+														<div class="b-day-name b-day-num" role="presentation">12</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-1 b-cal-empty-cell"
+													data-date="2024-05-13" data-cell-index="15" data-column-index="1"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">13</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-2 b-cal-empty-cell"
+													data-date="2024-05-14" data-cell-index="16" data-column-index="2"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">14</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-3 b-cal-empty-cell"
+													data-date="2024-05-15" data-cell-index="17" data-column-index="3"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">15</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-4 b-cal-empty-cell"
+													data-date="2024-05-16" data-cell-index="18" data-column-index="4"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">16</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-last-working-day b-day-of-week-5 b-cal-empty-cell"
+													data-date="2024-05-17" data-cell-index="19" data-column-index="5"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">17</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-6 b-cal-empty-cell"
+													data-date="2024-05-18" data-cell-index="20" data-column-index="6"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">18</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+											</div>
+										</div>
+										<div data-row-index="3" class="b-calendar-row b-calendar-week"
+											role="presentation" data-week="2024,21">
+											<div class="b-week-number-cell" role="presentation">21</div>
+											<div class="b-calendar-days" role="presentation">
+												<div role="presentation"
+													class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-0 b-cal-empty-cell"
+													data-date="2024-05-19" data-cell-index="21" data-column-index="0"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-week-num" role="presentation">21</div>
+														<div class="b-day-name b-day-num" role="presentation">19</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-1 b-cal-empty-cell"
+													data-date="2024-05-20" data-cell-index="22" data-column-index="1"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">20</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-2 b-cal-empty-cell"
+													data-date="2024-05-21" data-cell-index="23" data-column-index="2"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">21</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-3 b-cal-empty-cell"
+													data-date="2024-05-22" data-cell-index="24" data-column-index="3"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">22</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-4 b-cal-empty-cell"
+													data-date="2024-05-23" data-cell-index="25" data-column-index="4"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">23</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-last-working-day b-day-of-week-5 b-cal-empty-cell"
+													data-date="2024-05-24" data-cell-index="26" data-column-index="5"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">24</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-6 b-cal-empty-cell"
+													data-date="2024-05-25" data-cell-index="27" data-column-index="6"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">25</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+											</div>
+										</div>
+										<div data-row-index="4" class="b-calendar-row b-calendar-week"
+											role="presentation" data-week="2024,22">
+											<div class="b-week-number-cell" role="presentation">22</div>
+											<div class="b-calendar-days" role="presentation">
+												<div role="presentation"
+													class="b-calendar-cell b-weekend b-nonworking-day b-day-of-week-0 b-cal-empty-cell"
+													data-date="2024-05-26" data-cell-index="28" data-column-index="0"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-week-num" role="presentation">22</div>
+														<div class="b-day-name b-day-num" role="presentation">26</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-1 b-cal-empty-cell"
+													data-date="2024-05-27" data-cell-index="29" data-column-index="1"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">27</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-2 b-cal-empty-cell"
+													data-date="2024-05-28" data-cell-index="30" data-column-index="2"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">28</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-3 b-cal-empty-cell"
+													data-date="2024-05-29" data-cell-index="31" data-column-index="3"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">29</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-day-of-week-4 b-cal-empty-cell"
+													data-date="2024-05-30" data-cell-index="32" data-column-index="4"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">30</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-last-working-day b-day-of-week-5 b-cal-empty-cell"
+													data-date="2024-05-31" data-cell-index="33" data-column-index="5"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">31</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-weekend b-nonworking-day b-day-of-week-6 b-cal-empty-cell"
+													data-date="2024-06-01" data-cell-index="34" data-column-index="6"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">1</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+											</div>
+										</div>
+										<div data-row-index="5" class="b-calendar-row b-calendar-week"
+											role="presentation" data-week="2024,23">
+											<div class="b-week-number-cell" role="presentation">23</div>
+											<div class="b-calendar-days" role="presentation">
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-weekend b-nonworking-day b-day-of-week-0 b-cal-empty-cell"
+													data-date="2024-06-02" data-cell-index="35" data-column-index="0"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-week-num" role="presentation">23</div>
+														<div class="b-day-name b-day-num" role="presentation">2</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-day-of-week-1 b-cal-empty-cell"
+													data-date="2024-06-03" data-cell-index="36" data-column-index="1"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">3</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-day-of-week-2 b-cal-empty-cell"
+													data-date="2024-06-04" data-cell-index="37" data-column-index="2"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">4</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-day-of-week-3 b-cal-empty-cell"
+													data-date="2024-06-05" data-cell-index="38" data-column-index="3"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">5</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-day-of-week-4 b-cal-empty-cell"
+													data-date="2024-06-06" data-cell-index="39" data-column-index="4"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">6</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-today b-last-working-day b-day-of-week-5 b-cal-empty-cell"
+													data-date="2024-06-07" data-cell-index="40" data-column-index="5"
+													style="">
+													<div class="b-cal-cell-header b-today" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">7</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+												<div role="presentation"
+													class="b-calendar-cell b-other-month b-weekend b-nonworking-day b-last-visible-cell b-day-of-week-6 b-cal-empty-cell"
+													data-date="2024-06-08" data-cell-index="41" data-column-index="6"
+													style="">
+													<div class="b-cal-cell-header" role="presentation" style="">
+														<div class="b-day-name b-day-num" role="presentation">8</div>
+													</div>
+													<div class="b-cal-event-bar-container" role="presentation"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div data-owner-cmp="b-monthview-1" class="b-focus-trap b-end-focus-trap" aria-hidden="true"
+								tabindex="0"></div>
+						</div>
+						<div class="b-widget b-container b-panel b-eventrenderer b-responsive b-calendarmixin b-daycellcollecter b-daycellrenderer b-yearview b-vbox b-ltr b-hidden b-card-item"
+							role="region" id="b-yearview-1" aria-describedby="b-yearview-1-panel-title" data-ref="year"
+							data-item-index="3"
+							style="--event-spacing: 2px; --event-height: 25px; --arrow-width: calc(var(--event-height) / 3); --arrow-margin: calc(var(--event-height) / -3); --event-height-px: 25px; --week-length: 7;">
+							<div data-owner-cmp="b-yearview-1" class="b-focus-trap" aria-hidden="true" tabindex="0">
+							</div>
+							<div data-owner-cmp="b-yearview-1"
+								class="b-hbox b-box-center b-auto-container-panel b-panel-body-wrap b-yearview-body-wrap"
+								role="presentation">
+								<div data-owner-cmp="b-yearview-1"
+									class="b-panel-content b-eventrenderer-content b-responsive-content b-calendarmixin-content b-daycellcollecter-content b-daycellrenderer-content b-yearview-content b-box-center b-content-element b-auto-container b-ltr b-show-events-heatmap b-no-visible-children"
+									role="presentation"></div>
+							</div>
+							<div data-owner-cmp="b-yearview-1" class="b-focus-trap b-end-focus-trap" aria-hidden="true"
+								tabindex="0"></div>
+						</div>
+						<div class="b-widget b-container b-panel b-gridbase b-grid b-eventrenderer b-responsive b-calendarmixin b-daycellcollecter b-daterangeowner b-eventlist b-agendaview b-slide-vertical b-vbox b-grid-position b-enable-sticky b-grid-notextselection b-fill-last-column b-resize-monitored b-ltr b-hidden b-offset-continues-past b-card-item"
+							role="presentation" id="b-agendaview-1" data-ref="agenda" data-item-index="4"
+							style="--event-height: 25px; --arrow-width: calc(var(--event-height) / 3); --arrow-margin: calc(var(--event-height) / -3); min-height: 10em;">
+							<div data-owner-cmp="b-agendaview-1" class="b-focus-trap" aria-hidden="true" tabindex="0">
+							</div>
+							<div data-owner-cmp="b-agendaview-1"
+								class="b-hbox b-box-center b-panel-body-wrap b-agendaview-body-wrap"
+								role="presentation">
+								<div data-owner-cmp="b-agendaview-1" class="b-grid-panel-body" role="region"
+									aria-describedby="b-agendaview-1-panel-title" aria-colcount="1">
+									<header data-owner-cmp="b-agendaview-1" class="b-grid-header-container b-hidden"
+										role="row" aria-rowindex="1"></header>
+									<div data-owner-cmp="b-agendaview-1"
+										class="b-grid-body-container b-widget-scroller b-resize-monitored"
+										role="presentation" style="overflow-y: auto;">
+										<div data-owner-cmp="b-agendaview-1"
+											class="b-grid-vertical-scroller b-ltr b-single-child" role="presentation"
+											style="--event-row-spacing: 8px;">
+											<div data-region="normal"
+												class="b-grid-subgrid b-grid-subgrid-normal b-widget b-subgrid b-resize-monitored b-widget-scroller b-hide-scroll b-first-visible-child b-last-visible-child"
+												aria-label="normal" role="presentation"
+												id="b-agendaview-1-normalSubgrid" data-ref="normal" data-item-index="0"
+												style="flex: 1 1 0%; --total-column-width: 100; overflow-x: auto;">
+												<div class="b-empty-text" role="presentation">No records to display
+												</div>
+											</div>
+											<div data-region="normal" data-reference="splitterElement"
+												class="b-grid-splitter b-hide-display" role="presentation">
+												<div class="b-grid-splitter-inner b-grid-splitter-main"
+													role="presentation">
+													<div data-reference="splitterButtons"
+														class="b-grid-splitter-buttons" role="presentation">
+														<div class="b-grid-splitter-button-collapse"
+															role="presentation"><svg
+																class="b-grid-splitter-button-icon b-gridregion-collapse-arrow"
+																version="1.1" viewBox="0 0 256 512" role="presentation">
+																<path
+																	d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+																	role="presentation"></path>
+															</svg></div>
+														<div class="b-grid-splitter-button-expand" role="presentation">
+															<svg class="b-grid-splitter-button-icon b-gridregion-expand-arrow"
+																version="1.1" viewBox="0 0 256 512" role="presentation">
+																<path
+																	d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+																	role="presentation"></path>
+															</svg>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div data-owner-cmp="b-agendaview-1" class="b-virtual-scrollers b-hide-display"
+										role="presentation">
+										<div data-region="normal" data-reference="virtualScrollerElement"
+											class="b-virtual-scroller" role="presentation" tabindex="-1">
+											<div data-reference="virtualScrollerWidth" class="b-virtual-width"
+												role="presentation"></div>
+										</div>
+										<div data-region="normal" class="b-grid-splitter b-hide-display"
+											role="presentation">
+											<div class="b-grid-splitter-inner" role="presentation"></div>
+										</div>
+									</div>
+									<footer data-owner-cmp="b-agendaview-1" class="b-grid-footer-container b-hidden"
+										role="presentation">
+										<div class="b-grid-footer-scroller b-grid-footer-scroller-normal b-widget b-bar b-footer"
+											role="presentation" id="b-agendaview-1-normalSubgrid-footer"
+											style="flex: 1 1 0%;">
+											<div class="b-grid-footers b-grid-footers-normal" data-region="normal"
+												role="presentation"
+												data-owner-cmp="b-agendaview-1-normalSubgrid-footer"></div>
+										</div>
+										<div data-region="normal" class="b-grid-splitter b-hide-display"
+											role="presentation">
+											<div class="b-grid-splitter-inner" role="presentation"></div>
+										</div>
+									</footer>
+								</div>
+							</div>
+							<div data-owner-cmp="b-agendaview-1" class="b-focus-trap b-end-focus-trap"
+								aria-hidden="true" tabindex="0"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div data-owner-cmp="b-calendar-1" class="b-focus-trap b-end-focus-trap" aria-hidden="true" tabindex="0">
+			</div>
+		</div>
+	</div>
+	<!-- Using Ecma Modules bundle -->
+	<script
+		src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/examples.locales.umd.js"></script>
+	<script data-default-locale="En" type="module"
+		src="./Bryntum Calendar - Multi assignment using resourceIds field demo_files/app.module.js"></script>
+
+
+
+	<div class="b-float-root b-outer b-linux b-visible-scrollbar b-chrome b-theme-stockholm" role="presentation"></div>
+</body>
+<div class="b-scrollbar-measure-element" role="presentation"
+	style="position: absolute; top: -9999em; height: 100px; overflow-y: scroll;"></div>
+
+</html>

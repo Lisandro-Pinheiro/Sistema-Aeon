@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AeonTech | Admin </title>
+  <link rel="icon" type="image/png" href="dist/img/logo.png">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+  <script>
+    function saveProfile() {
+      // Obter os valores dos campos do modal
+      var newName = document.getElementById("editModalName").value;
+      var newEducation = document.getElementById("editModalEducation").value;
+      var newLocation = document.getElementById("editModalLocation").value;
+      var newPhone = document.getElementById("editModalPhone").value;
+      var newEmail = document.getElementById("editModalEmail").value;
+      var newAge = document.getElementById("editModalAge").value;
+      var newSkills = document.getElementById("editModalSkills").value;
+
+      // Definir os valores nos campos correspondentes do perfil
+      document.getElementById("profileName").textContent = newName;
+      document.getElementById("profileEducation").textContent = newEducation;
+      document.getElementById("profileLocation").textContent = newLocation;
+      document.getElementById("profilePhone").textContent = newPhone;
+      document.getElementById("profileEmail").textContent = newEmail;
+      document.getElementById("profileAge").textContent = newAge;
+      document.getElementById("profileSkills").textContent = newSkills;
+
+      // Fechar o modal
+      $('#editProfileModal').modal('hide');
+    }
+
+    function addProfile() {
+      const name = document.getElementById('newName').value;
+      const education = document.getElementById('newEducation').value;
+      const location = document.getElementById('newLocation').value;
+      const phone = document.getElementById('newPhone').value;
+      const email = document.getElementById('newEmail').value;
+      const age = document.getElementById('newAge').value;
+      const skills = document.getElementById('newSkills').value;
+
+      // Aqui você pode adicionar lógica para armazenar o novo perfil no banco de dados
+
+      alert('Novo perfil adicionado com sucesso!');
+
+      // Fechar modal após adicionar o perfil
+      $('#addProfileModal').modal('hide');
+    }
+
+
+    function saveProfile() {
+      const name = document.getElementById('editModalName').value;
+      const education = document.getElementById('editModalEducation').value;
+      const location = document.getElementById('editModalLocation').value;
+      const phone = document.getElementById('editModalPhone').value;
+      const email = document.getElementById('editModalEmail').value;
+      const age = document.getElementById('editModalAge').value;
+      const skills = document.getElementById('editModalSkills').value;
+
+      document.getElementById('profileName').innerText = name;
+      document.getElementById('profileEducation').innerText = education;
+      document.getElementById('profileLocation').innerText = location;
+      document.getElementById('profilePhone').innerText = phone;
+      document.getElementById('profileEmail').innerText = email;
+      document.getElementById('profileAge').innerText = age;
+      document.getElementById('profileSkills').innerText = skills;
+
+      $('#editProfileModal').modal('hide'); // Fechar o modal após salvar
+      alert('Perfil atualizado com sucesso!');
+    }
+    document.getElementById("addProfileBtn").addEventListener("click", function () {
+      var profileSettings = document.getElementById("profileSettings");
+      if (profileSettings.style.display === "none") {
+        profileSettings.style.display = "block";
+      } else {
+        profileSettings.style.display = "none";
+      }
+    });
+  </script>
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="#" class="nav-link">Contato</a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Navbar Search -->
+        <li class="nav-item">
+          <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+            <i class="fas fa-search"></i>
+          </a>
+          <div class="navbar-search-block">
+            <form class="form-inline">
+              <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                  <button class="btn btn-navbar" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                  <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </li>
+
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-comments"></i>
+            <span class="badge badge-danger navbar-badge">3</span>
+          </a>          
+        </li>
+        <!-- Notifications Dropdown Menu -->
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+            <i class="fas fa-th-large"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-link">
+
+        <img src="dist/img/logo white.png" alt=""
+          style="width: 90px; height: 35px; background-position: center; margin-left: 60px;">
+        <span class="brand-text font-weight-bolder" style="font-size:x-large; margin-left: 60px;"></span>
+
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Administrador</a>
+          </div>
+        </div>
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+          <div class="input-group" data-widget="sidebar-search">
+            <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-sidebar">
+                <i class="fas fa-search fa-fw"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <i class="nav-icon fas fa-home"></i>
+                <p>
+                  Home
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <a href="admin.html" class="nav-link">
+                <i class="nav-icon fas fa-user-alt"></i>
+                <p>
+                  Admin
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <a href="clientes.html" class="nav-link">
+                <i class="nav-icon fas fa-briefcase"></i>
+                <p>
+                  Cliente
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <a href="visitas.html" class="nav-link">
+                <i class="nav-icon fas fa-bus-alt"></i>
+                <p>
+                  Visitas
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <a href="ferias.html" class="nav-link">
+                <i class="nav-icon fas fa-calendar-alt"></i>
+                <p>
+                  Férias
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <a href="colaboradores.html" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>
+                <p>
+                  Colaboradores
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+
+              <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <div class="content-wrapper">
+      <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1>Perfil do [Técnico Logado]</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Admin</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-9 profile-card" style="margin-left: 150px;">
+              <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                  <div class="text-center">
+                    <img class="profile-user-img img-fluid img-circle" src="dist/img/user2-160x160.jpg"
+                      alt="User profile picture">
+                  </div>
+                  <h3 class="profile-username text-center" id="profileName">Administrador</h3>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <strong><i class="fas fa-book mr-1"></i> Formação</strong>
+                      <p class="text-muted" id="profileEducation">B.S. in Computer Science</p>
+                      <hr>
+                      <strong><i class="fas fa-map-marker-alt mr-1"></i> Localização</strong>
+                      <p class="text-muted" id="profileLocation">Malibu, California</p>
+                      <hr>
+                      <strong><i class="fas fa-phone mr-1"></i> Telefone</strong>
+                      <p class="text-muted" id="profilePhone">+1 234 567 890</p>
+                    </div>
+                    <div class="col-md-6">
+                      <strong><i class="fas fa-envelope mr-1"></i> Email</strong>
+                      <p class="text-muted" id="profileEmail">gabriel@example.com</p>
+                      <hr>
+                      <strong><i class="fas fa-user mr-1"></i> Idade</strong>
+                      <p class="text-muted" id="profileAge">30</p>
+                      <hr>
+                      <strong><i class="fas fa-pencil-alt mr-1"></i> Habilidades</strong>
+                      <p class="text-muted" id="profileSkills">
+                        <span class="badge badge-danger">UI Design</span>
+                        <span class="badge badge-success">Coding</span>
+                        <span class="badge badge-info">Javascript</span>
+                        <span class="badge badge-warning">PHP</span>
+                        <span class="badge badge-primary">Node.js</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="text-center mt-3">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#profileModal">
+                      Novo Perfil
+                    </button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                      data-target="#editProfileModal">Editar Perfil</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="profileModalLabel">Criar Perfil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="form-horizontal" id="profileForm">
+                      <div class="form-group row">
+                        <label for="editName" class="col-sm-2 col-form-label">Nome</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="editName" placeholder="Nome">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="editEducation" class="col-sm-2 col-form-label">Formação</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="editEducation" placeholder="Formação">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="editLocation" class="col-sm-2 col-form-label">Localização</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="editLocation" placeholder="Localização">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="editPhone" class="col-sm-2 col-form-label">Telefone</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="editPhone" placeholder="Telefone">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="editEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="editEmail" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="editAge" class="col-sm-2 col-form-label">Idade</label>
+                        <div class="col-sm-10">
+                          <input type="number" class="form-control" id="editAge" placeholder="Idade">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="editSkills" class="col-sm-2 col-form-label">Habilidades</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="editSkills" placeholder="Habilidades">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                          <button type="button" class="btn btn-danger" onclick="saveProfile()">Salvar</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+  </div>
+
+  <!-- Edit Profile Modal -->
+
+  <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editProfileModalLabel">Editar Perfil</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="editProfileForm">
+            <div class="form-group">
+              <label for="editModalName">Nome</label>
+              <input type="text" class="form-control" id="editModalName" required>
+            </div>
+            <div class="form-group">
+              <label for="editModalEducation">Formação</label>
+              <input type="text" class="form-control" id="editModalEducation" required>
+            </div>
+            <div class="form-group">
+              <label for="editModalLocation">Localização</label>
+              <input type="text" class="form-control" id="editModalLocation" required>
+            </div>
+            <div class="form-group">
+              <label for="editModalPhone">Telefone</label>
+              <input type="text" class="form-control" id="editModalPhone" required>
+            </div>
+            <div class="form-group">
+              <label for="editModalEmail">Email</label>
+              <input type="email" class="form-control" id="editModalEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="editModalAge">Idade</label>
+              <input type="number" class="form-control" id="editModalAge" required>
+            </div>
+            <div class="form-group">
+              <label for="editModalSkills">Habilidades</label>
+              <input type="text" class="form-control" id="editModalSkills" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="saveProfile()">Salvar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- CONTENT WRAPPER -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="#"> AeonTech</a>.</strong>
+    Todos os direitos reservados.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 0.0.1
+    </div>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+</body>
+
+</html>

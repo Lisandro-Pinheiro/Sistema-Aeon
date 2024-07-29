@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <button id="authButton">Login with Microsoft</button>
+
+  <script>
+    document.getElementById('authButton').addEventListener('click', function() {
+      window.location.href = 'http://localhost:3001/auth';
+    });
+  </script>
+</body>
+</html>
